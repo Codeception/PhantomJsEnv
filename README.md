@@ -47,3 +47,11 @@ In case local web site is served by nginx or Apache, and is configured for a spe
 ```
 docker run -i -t -p 4444:4444 -e APP_HOST=myapp davert/phantomjs-env 
 ```
+
+### Accessing Site with self-signed certificate
+
+If you want to test site in local environment without proper SSL certificate, you can pass APP_ANY_PROTOCOL setting as environment variable:
+
+```
+docker run -i -t -p 4444:4444 -e APP_ANY_PROTOCOL=true davert/phantomjs-env 
+```
