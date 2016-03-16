@@ -13,7 +13,7 @@ echo "$HOST_IP dockerhost" >> /etc/hosts
 if [ $APP_HOST ];
 then
   echo "Registering host $APP_HOST"
-  echo "$HOSTIP $APP_HOST" >> /etc/hosts
+  echo "$HOST_IP $APP_HOST" >> /etc/hosts
 fi;
 
 # allow for running in test environment
